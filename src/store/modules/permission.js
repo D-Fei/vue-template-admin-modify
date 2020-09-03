@@ -1,4 +1,4 @@
-import { constantRoutes, asyncRoutes } from '@/router'
+import { configRouters, asyncRoutes } from '@/router'
 
 function hasPermission(roles,route){
     if(route.meta && route.meta.roles) {
@@ -32,7 +32,7 @@ const state = {
 const mutations = {
     SET_ROUTES: (state, routes) => {
         state.addRoutes = routes
-        state.routes = constantRoutes.concat(routes)
+        state.routes = configRouters.concat(routes)
     }
 }
 
